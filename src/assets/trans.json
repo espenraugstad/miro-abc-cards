@@ -1,0 +1,36 @@
+{
+    "en":{
+        "title": "ABC Learning Cards",
+        "desc": "Drag out as many cards you want for each activity and place them in a timeline or similar.",
+        "lang-btn": "Switch to Norwegian",
+        "acq-head": "Learning typ: Acquisition",
+        "acq-body": "Learning through acquisition is what learners are doing when they are listening to a lecture or a podcast, reading from books or websites, and watching demos or videos.",
+        "dis-head": "Learning type: Discussion",
+        "dis-body": "Learning through discussion requires the learner articulate their ideas and questions, and to challenge and respond to the ideas and questions from the teacher, and/or from their peers.",
+        "col-head": "Learning type: Collaboration",
+        "col-body": "Learning through collaboration embraces mainly discussion, practice, and production. Building on investigations and acquisition it is about taking part in the process of knowledge building itself.",
+        "pra-head": "Learning type: Practice",
+        "pra-body": "Learning through practice enables the learner to adapt their actions to the task goal, and use the feedback to improve their next action. Feedback may come from self-reflection, from peers, from the teacher, or from the activity itself, if it shows them how to improve the result of their action in relation to the goal.",
+        "pro-head": "Learning type: Production",
+        "pro-body": "Learning through production is the way the teacher motivates the learner to consolidate what they have learned by articulating their current conceptual understanding and how they use it in practice.",
+        "inv-head": "Learning type: Investigation",
+        "inv-body": "Learning through investigation guides the learner to explore, compare and critique the texts, documents and resources that reflect the concepts and ideas being taught."
+    },
+    "no":{
+        "title": "ABC Læringskort",
+        "desc": "Dra ut så mange kort du ønsker for hver aktivitet og plasser de i en tidslinje eller lignende.",
+        "lang-btn": "Bytt til engelsk",
+        "acq-head": "Læringsform: Tilegnelse",
+        "acq-body": "Læring gjennom tilegnelse er hva studenter gjør når de lytter til en forelesning eller podcast, leser fra en bok eller nettsider, og ser på videoer.",
+        "dis-head": "Læringsform: Diskusjon",
+        "dis-body": "Læring gjennom diskusjon krever at studenten formulerer deres ideér og spørsmål, og utfordrer dem til å respondere på spørsmål fra medstudenter og foreleser.",
+        "col-head": "Læringsform: Samarbeid",
+        "col-body": "Læring gjennom samarbeid omfatter hovedsaklig diskusjoner, øvelser og produksjon. Basert på undersøkelser og tilegnelse handler det om å ta del i en kunnskapsbyggende prosess.",
+        "pra-head": "Læringsform: Øvelse",
+        "pra-body": "Læring gjennom å øve/ praktisere hjelper studentene til å bearbede kunnskapen, og bruke tilbakemeldinger for å forbedre sine resultater. Tilbakemeldinger kan komme fra selvrefleksjon, andre studenter, studentassistenter, foreleseren eller fra aktiviteten selv (om den viser hvordan studentene kan forbedre seg).",
+        "pro-head": "Læringsform: Produksjon",
+        "pro-body": "Læring gjennom å produsere selv er en måte å motivere studentene til å samle det de har lært ved å fremlegge deres nåværende forståelse av faget og hvordan de vil bruke det i praksis.",
+        "inv-head": "Læringsform: Undersøkelse",
+        "inv-body": "Læring gjennom å undersøke, veiled studenten til å utforske, sammenligne og kritisere tekster, documenter og andre ressurser gjør at studentene reflekter over consepter og ideér som blir undervist."
+    }
+}
