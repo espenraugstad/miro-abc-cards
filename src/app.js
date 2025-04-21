@@ -12,10 +12,13 @@ async function init() {
 
   await miro.board.ui.on("drop", async ({ x, y, target }) => {
     let type = Array.from(target.classList).filter(
-      (c) => c !== "activity" && c !== "miro-draggable"
+      (className) => className !== "activity" && className !== "miro-draggable"
     )[0];
-
-    await addCard(x, y, target.innerHTML, type);
+    if(type !== "formative" && type !== "summative"){
+      await addCard(x, y, target.innerHTML, type);
+    } else {
+      await addAssessmentStar(x,y, type[0].toUpperCase());
+    }
   });
 }
 
@@ -24,7 +27,6 @@ init();
 function applyTranslations() {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach(element =>{
-    console.log(element);
     const key = element.getAttribute("data-i18n");
     element.innerText = trans[lang][key];
   });
@@ -34,7 +36,7 @@ const cardStyles = {
   acq: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#81E7DE", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -47,7 +49,7 @@ const cardStyles = {
   dis: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#86B4F9", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -60,7 +62,7 @@ const cardStyles = {
   col: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#FFB575", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -73,7 +75,7 @@ const cardStyles = {
   pra: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#DEDAFF", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -86,7 +88,7 @@ const cardStyles = {
   pro: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#ADF0C7", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -99,7 +101,7 @@ const cardStyles = {
   inv: {
     color: "#1a1a1a", // Default text color: '#1a1a1a' (black)
     fillColor: "#FFC6C6", // Default shape fill color: transparent (no fill)
-    fontFamily: "arial", // Default font type for the text
+    fontFamily: "open_sans", // Default font type for the text
     fontSize: 14, // Default font size for the text, in dp
     textAlign: "center", // Default horizontal alignment for the text
     textAlignVertical: "middle", // Default vertical alignment for the text
@@ -116,7 +118,6 @@ async function addCard(x, y, content, type) {
   tmpDiv.innerHTML = content;
   const head = tmpDiv.querySelector("strong").textContent;
   const body = tmpDiv.querySelector("p").textContent;
-  console.log(cardStyles[type]);
 
   await miro.board.createShape({
     content: `<strong>${head}</strong><br><br><p>${body}</p>`,
@@ -129,12 +130,28 @@ async function addCard(x, y, content, type) {
   });
 }
 
-async function addSticky() {
-  const stickyNote = await miro.board.createStickyNote({
-    content: "Hello, World!",
+async function addAssessmentStar(x, y, type){
+  await miro.board.createShape({
+    content: `<strong>${type}</strong>`,
+    shape: "star",
+    style: {
+      color: '#1a1a1a', // Default text color: '#1a1a1a' (black)
+      fillColor: type === "F" ? '#c0c0c0' : '#EFBF04', // Default shape fill color: transparent (no fill)
+      fontFamily: 'open_sans', // Default font type for the text
+      fontSize: 18, // Default font size for the text, in dp
+      textAlign: 'center', // Default horizontal alignment for the text
+      textAlignVertical: 'middle', // Default vertical alignment for the text
+      borderStyle: 'normal', // Default border line style
+      borderOpacity: 1.0, // Default border color opacity: no opacity
+      borderColor: '#ffffff', // Default border color: '#ffffff` (white)
+      borderWidth: 2, // Default border width
+      fillOpacity: 1.0, // Default fill color opacity: no opacity
+    },
+    x,
+    y,
+    width: 50,
+    height: 50
   });
-
-  await miro.board.viewport.zoomTo(stickyNote);
 }
 
 const langBtn = document.getElementById("switchLang");

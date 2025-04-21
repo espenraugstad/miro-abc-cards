@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://miro.com/app/static/sdk/v2/miro.js"></script>
-    <title>Abc Cards</title>
+    <title>ABC Cards</title>
     <style>
       .activity {
         text-align: center;
@@ -26,17 +26,20 @@
       .dis {
         background-color: #86b4f9;
       }
-      .col{
-        background-color: #FFB575;
+      .col {
+        background-color: #ffb575;
       }
-      .pra{
-        background-color: #DEDAFF;
+      .pra {
+        background-color: #dedaff;
       }
-      .pro{
-        background-color: #ADF0C7;
+      .pro {
+        background-color: #adf0c7;
       }
-      .inv{
-        background-color: #FFC6C6;
+      .inv {
+        background-color: #ffc6c6;
+      }
+      .formative img, .summative img{
+        width: 75px;
       }
     </style>
   </head>
@@ -44,19 +47,45 @@
     <div id="root">
       <div class="grid wrapper">
         <div class="cs1 ce12">
-          <h1 data-i18n="title">Congratulations!</h1>
+          <h1 data-i18n="title">Tittel</h1>
         </div>
         <div class="cs1 ce12">
-          <p data-i18n="desc">Congratulations!</p>
+          <p data-i18n="desc">Beskrivelse</p>
+        </div>
+        <div class="cs1 ce12">
+          <button
+            id="switchLang"
+            class="button button-primary"
+            data-i18n="lang-btn"
+          >
+            Bytt språk
+          </button>
         </div>
 
-        <button id="switchLang" class="button button-primary" data-i18n="lang-btn">Bytt språk</button>
+        <hr class="cs1 ce12"/>
+        <div class="cs1 ce12">
+          <h2 data-i18n="assess">Vurdering</h2>
+        </div>
 
+        
+          <div class="formative miro-draggable cs1 ce6">
+            <img src="./src/assets/form.png" alt="Formative assessment star">
+          </div>
+          <div  class="summative miro-draggable cs7 ce12">
+            <img src="./src/assets/sum.png" alt="Summative assessment star">
+          </div>
+          <hr class="cs1 ce12"/>
+          <div class="cs1 ce12">
+            <h2 data-i18n="cards">Kort</h2>
+          </div>
 
         <div class="cs1 ce12">
           <div class="activity miro-draggable acq">
             <strong data-i18n="acq-head">Læringsform: Tilegnelse</strong>
-            <p data-i18n="acq-body">Læring gjennom tilegnelse er hva studenter gjør når de lytter til en forelesning eller podcast, leser fra en bok eller nettsider, og ser på videoer.
+            <p data-i18n="acq-body">
+              Læring gjennom tilegnelse er hva studenter gjør når de lytter til
+              en forelesning eller podcast, leser fra en bok eller nettsider, og
+              ser på videoer.
             </p>
           </div>
         </div>
@@ -64,7 +93,10 @@
         <div class="cs1 ce12">
           <div class="activity miro-draggable dis">
             <strong data-i18n="dis-head">Læringsform: Diskusjon</strong>
-            <p data-i18n="dis-body">Læring gjennom diskusjon krever at studenten formulerer deres ideér og spørsmål, og utfordrer dem til å respondere på spørsmål fra medstudenter og foreleser.
+            <p data-i18n="dis-body">
+              Læring gjennom diskusjon krever at studenten formulerer deres
+              ideér og spørsmål, og utfordrer dem til å respondere på spørsmål
+              fra medstudenter og foreleser.
             </p>
           </div>
         </div>
@@ -72,16 +104,23 @@
         <div class="cs1 ce12">
           <div class="activity miro-draggable col">
             <strong data-i18n="col-head">Læringsform: Samarbeid</strong>
-            <p data-i18n="col-body">Læring gjennom samarbeid omfatter hovedsaklig diskusjoner, øvelser og produksjon. Basert på undersøkelser og tilegnelse handler det om å ta del i en kunnskapsbyggende prosess.
+            <p data-i18n="col-body">
+              Læring gjennom samarbeid omfatter hovedsaklig diskusjoner, øvelser
+              og produksjon. Basert på undersøkelser og tilegnelse handler det
+              om å ta del i en kunnskapsbyggende prosess.
             </p>
           </div>
         </div>
 
-        
         <div class="cs1 ce12">
           <div class="activity miro-draggable pra">
             <strong data-i18n="pra-head">Læringsform: Øvelse</strong>
-            <p data-i18n="pra-body">Læring gjennom å øve/ praktisere hjelper studentene til å bearbede kunnskapen, og bruke tilbakemeldinger for å forbedre sine resultater. Tilbakemeldinger kan komme fra selvrefleksjon, andre studenter, studentassistenter, foreleseren eller fra aktiviteten selv (om den viser hvordan studentene kan forbedre seg).
+            <p data-i18n="pra-body">
+              Læring gjennom å øve/ praktisere hjelper studentene til å bearbede
+              kunnskapen, og bruke tilbakemeldinger for å forbedre sine
+              resultater. Tilbakemeldinger kan komme fra selvrefleksjon, andre
+              studenter, studentassistenter, foreleseren eller fra aktiviteten
+              selv (om den viser hvordan studentene kan forbedre seg).
             </p>
           </div>
         </div>
@@ -89,7 +128,10 @@
         <div class="cs1 ce12">
           <div class="activity miro-draggable pro">
             <strong data-i18n="pro-head">Læringsform: Produksjon</strong>
-            <p data-i18n="pro-body">Læring gjennom å produsere selv er en måte å motivere studentene til å samle det de har lært ved å fremlegge deres nåværende forståelse av faget og hvordan de vil bruke det i praksis.
+            <p data-i18n="pro-body">
+              Læring gjennom å produsere selv er en måte å motivere studentene
+              til å samle det de har lært ved å fremlegge deres nåværende
+              forståelse av faget og hvordan de vil bruke det i praksis.
             </p>
           </div>
         </div>
@@ -97,7 +139,11 @@
         <div class="cs1 ce12">
           <div class="activity miro-draggable inv">
             <strong data-i18n="inv-head">Læringsform: Undersøkelse</strong>
-            <p data-i18n="inv-body">Læring gjennom å undersøke, veiled studenten til å utforske, sammenligne og kritisere tekster, documenter og andre ressurser gjør at studentene reflekter over consepter og ideér som blir undervist.
+            <p data-i18n="inv-body">
+              Læring gjennom å undersøke, veiled studenten til å utforske,
+              sammenligne og kritisere tekster, documenter og andre ressurser
+              gjør at studentene reflekter over consepter og ideér som blir
+              undervist.
             </p>
           </div>
         </div>

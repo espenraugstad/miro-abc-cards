@@ -14,7 +14,11 @@
         "pro-head": "Learning type: Production",
         "pro-body": "Learning through production is the way the teacher motivates the learner to consolidate what they have learned by articulating their current conceptual understanding and how they use it in practice.",
         "inv-head": "Learning type: Investigation",
-        "inv-body": "Learning through investigation guides the learner to explore, compare and critique the texts, documents and resources that reflect the concepts and ideas being taught."
+        "inv-body": "Learning through investigation guides the learner to explore, compare and critique the texts, documents and resources that reflect the concepts and ideas being taught.",
+        "assess": "Assessment",
+        "sum": "Summative",
+        "form": "Formative",
+        "cards": "Cards"
     },
     "no":{
         "title": "ABC Læringskort",
@@ -31,6 +35,10 @@
         "pro-head": "Læringsform: Produksjon",
         "pro-body": "Læring gjennom å produsere selv er en måte å motivere studentene til å samle det de har lært ved å fremlegge deres nåværende forståelse av faget og hvordan de vil bruke det i praksis.",
         "inv-head": "Læringsform: Undersøkelse",
-        "inv-body": "Læring gjennom å undersøke, veiled studenten til å utforske, sammenligne og kritisere tekster, documenter og andre ressurser gjør at studentene reflekter over consepter og ideér som blir undervist."
+        "inv-body": "Læring gjennom å undersøke, veiled studenten til å utforske, sammenligne og kritisere tekster, documenter og andre ressurser gjør at studentene reflekter over consepter og ideér som blir undervist.",
+        "assess": "Vurdering",
+        "sum": "Summativ",
+        "form": "Formativ",
+        "cards": "Kort"
     }
 }
